@@ -1,0 +1,482 @@
+[
+  {
+    "id": "TC001",
+    "title": "User Signup with Valid Data",
+    "description": "Verify that a new user can successfully sign up with valid email, password, and required details.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the signup page"
+      },
+      {
+        "type": "action",
+        "description": "Enter valid email, password, and confirm password fields"
+      },
+      {
+        "type": "action",
+        "description": "Submit the signup form"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that signup completes successfully and user is redirected to verification or dashboard page"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "User Signup with Invalid Email",
+    "description": "Verify that signup fails when an invalid email format is provided.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the signup page"
+      },
+      {
+        "type": "action",
+        "description": "Enter invalid email format with valid password"
+      },
+      {
+        "type": "action",
+        "description": "Submit the signup form"
+      },
+      {
+        "type": "assertion",
+        "description": "Form displays an error for invalid email and signup does not proceed"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "User Login with Correct Credentials",
+    "description": "Verify that a user with valid credentials can log in successfully.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page"
+      },
+      {
+        "type": "action",
+        "description": "Enter registered email and correct password"
+      },
+      {
+        "type": "action",
+        "description": "Click the login button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify user is authenticated and redirected to workspace dashboard"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "User Login with Incorrect Password",
+    "description": "Verify that login fails when an incorrect password is entered.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page"
+      },
+      {
+        "type": "action",
+        "description": "Enter registered email and incorrect password"
+      },
+      {
+        "type": "action",
+        "description": "Click the login button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify error message is displayed and user remains on login page"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "User Email Verification Process",
+    "description": "Verify that verification email link works and user can verify their account.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Complete signup with new user"
+      },
+      {
+        "type": "action",
+        "description": "Access the verification email received"
+      },
+      {
+        "type": "action",
+        "description": "Click verification link and complete verification process"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that user account is marked as verified and user can access dashboard"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Workspace Dashboard Data Loading",
+    "description": "Verify that the workspace dashboard loads user-specific data and renders properly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Log in as a valid user"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the workspace dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify dashboard displays correct user data and components load without error"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify UI adapts correctly on different screen sizes (responsive check)"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Edit User Profile Successfully",
+    "description": "Verify that user can edit and save changes to their profile information.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Log in and navigate to profile edit page"
+      },
+      {
+        "type": "action",
+        "description": "Modify fields such as name, avatar, or bio"
+      },
+      {
+        "type": "action",
+        "description": "Submit changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify profile updates are saved and displayed correctly"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Profile Edit Validation Errors",
+    "description": "Verify form validation and error messages occur when invalid profile data is entered.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to profile edit page"
+      },
+      {
+        "type": "action",
+        "description": "Enter invalid data inputs (e.g. unsupported image format, invalid characters)"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to save changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Form rejects invalid inputs and shows appropriate error messages"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Navigation Bar Links and Session Persistence",
+    "description": "Verify that global navigation links route correctly and user session remains active during navigation.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Log in to the application"
+      },
+      {
+        "type": "action",
+        "description": "Use the global navbar to navigate to profile, community, marketplace, messages, and tickets pages"
+      },
+      {
+        "type": "assertion",
+        "description": "Each page loads correctly and maintains authenticated user session"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Community Engagement - View and Post",
+    "description": "Verify that user can view community posts and create new posts.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to community page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify list of community posts is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Create a new community post with valid content"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new post appears in the community feed"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Marketplace - Browse Items and Purchase Flow",
+    "description": "Verify the marketplace allows browsing items and completing a purchase transaction.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to marketplace page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify items and services are listed correctly with details"
+      },
+      {
+        "type": "action",
+        "description": "Select an item and initiate purchase"
+      },
+      {
+        "type": "action",
+        "description": "Complete purchase with valid payment/process flow"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify purchase confirmation and item ownership update"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Messages - Send and Receive",
+    "description": "Verify user can send a message to another user and receive messages successfully.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to messages page"
+      },
+      {
+        "type": "action",
+        "description": "Select a user to initiate a new message"
+      },
+      {
+        "type": "action",
+        "description": "Send a message with valid content"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that the message appears in the conversation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that incoming messages from other users appear in the message list"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Messages - Send Empty or Invalid Message",
+    "description": "Verify sending empty message or invalid content is prevented with error handling.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to messages page"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to send an empty message"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify form disables send button or shows validation error"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Ticketing System - Create and Manage Tickets",
+    "description": "Verify users can create new support or task tickets and update ticket status.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to tickets page"
+      },
+      {
+        "type": "action",
+        "description": "Create a new ticket with valid subject and description"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify new ticket appears in ticket list with correct details"
+      },
+      {
+        "type": "action",
+        "description": "Update ticket status (e.g. mark as resolved)"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify ticket status updates correctly in the UI and backend"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "UI Components Rendering Consistency",
+    "description": "Verify all reusable UI components render correctly across pages with consistent styling.",
+    "category": "ui",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate through pages: login, signup, dashboard, profile, community, marketplace, messages, tickets"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify buttons, inputs, cards, dialogs, avatars, and forms render consistently and function correctly"
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "Supabase Integration - Authentication and Data Storage",
+    "description": "Verify that Supabase integration correctly handles authentication, data fetching and updating without errors.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Perform user login, signup, and verification flows"
+      },
+      {
+        "type": "action",
+        "description": "Create, update, delete entries in profile, community posts, marketplace listings, messages, and tickets"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify changes reflect accurately in the UI and database without errors"
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Form Input Validation Across Application",
+    "description": "Verify all forms validate inputs correctly and display user-friendly error messages.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Attempt invalid inputs in forms for signup, login, profile edit, community post, marketplace listing, messaging, and tickets"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify validation errors display as expected and invalid submissions are prevented"
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "Session Persistence and Logout Flow",
+    "description": "Verify user session persists during navigation and logout works correctly terminating the session.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Log in successfully"
+      },
+      {
+        "type": "action",
+        "description": "Navigate across multiple pages"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify user session remains active during navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click logout"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify user session terminates and is redirected to login page"
+      }
+    ]
+  },
+  {
+    "id": "TC019",
+    "title": "Error Handling for Network Failures",
+    "description": "Verify the application handles network failures gracefully with appropriate user feedback.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Simulate network failure during data requests"
+      },
+      {
+        "type": "action",
+        "description": "Attempt actions such as login, data fetching, form submissions"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify error messages or fallback UI is displayed indicating network issues"
+      }
+    ]
+  },
+  {
+    "id": "TC020",
+    "title": "Edge Case: Extremely Large Profile Picture Upload",
+    "description": "Verify system behavior when uploading a very large image as profile avatar.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to profile edit page"
+      },
+      {
+        "type": "action",
+        "description": "Attempt to upload a very large image file as profile picture"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify system handles upload properly with size limits or shows error message"
+      }
+    ]
+  }
+]

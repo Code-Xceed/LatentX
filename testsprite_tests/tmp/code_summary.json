@@ -1,0 +1,94 @@
+{
+  "tech_stack": [
+    "TypeScript",
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Supabase"
+  ],
+  "features": [
+    {
+      "name": "Authentication",
+      "description": "User authentication including login, signup, and verification flows.",
+      "files": [
+        "app/(auth)/login/page.tsx",
+        "app/(auth)/signup/page.tsx",
+        "app/(auth)/verify/page.tsx",
+        "lib/auth/actions.ts"
+      ]
+    },
+    {
+      "name": "Navigation",
+      "description": "Global navigation bar and footer components.",
+      "files": [
+        "components/layout/Navbar.tsx",
+        "components/layout/Footer.tsx"
+      ]
+    },
+    {
+      "name": "Workspace",
+      "description": "Main user workspace dashboard area.",
+      "files": [
+        "app/workspace/page.tsx"
+      ]
+    },
+    {
+      "name": "Profile Management",
+      "description": "User profile viewing and editing functionality.",
+      "files": [
+        "app/profile/page.tsx",
+        "app/profile/edit/page.tsx",
+        "components/profile/profile-form.tsx"
+      ]
+    },
+    {
+      "name": "Community",
+      "description": "Community engagement interface.",
+      "files": [
+        "app/community/page.tsx"
+      ]
+    },
+    {
+      "name": "Marketplace",
+      "description": "Marketplace interface for items or services.",
+      "files": [
+        "app/marketplace/page.tsx"
+      ]
+    },
+    {
+      "name": "Messages",
+      "description": "User messaging interface.",
+      "files": [
+        "app/messages/page.tsx"
+      ]
+    },
+    {
+      "name": "Tickets",
+      "description": "Support or task ticketing system interface.",
+      "files": [
+        "app/tickets/page.tsx"
+      ]
+    },
+    {
+      "name": "Shared UI Components",
+      "description": "Reusable UI components including buttons, inputs, cards, and dialogs.",
+      "files": [
+        "components/ui/button.tsx",
+        "components/ui/input.tsx",
+        "components/ui/card.tsx",
+        "components/ui/dialog.tsx",
+        "components/ui/avatar.tsx",
+        "components/ui/form.tsx"
+      ]
+    },
+    {
+      "name": "Supabase Configuration",
+      "description": "Supabase client and server utilities for database and auth interaction.",
+      "files": [
+        "lib/supabase.ts",
+        "lib/supabase/server.ts",
+        "proxy.ts"
+      ]
+    }
+  ]
+}

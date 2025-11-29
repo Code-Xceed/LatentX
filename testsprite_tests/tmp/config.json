@@ -1,0 +1,18 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "loginUser": "aditya.rathore10101@gmail.com",
+  "loginPassword": "Gcoder15",
+  "executionArgs": {
+    "projectName": "latentx",
+    "projectPath": "C:\\Users\\ADITYA\\OneDrive\\Desktop\\latentx\\latentx",
+    "testIds": [],
+    "additionalInstruction": "",
+    "envs": {
+      "API_KEY": "sk-user-xFGhTJY2bjGEaiZC7GMwV8WWrOSpiiXNoKTG1U9fzdvxDm-ZocT3eg__vuf7nE3CXZ5B12_33XoM7cjcCalkObMztXBBNUABRr9c4g1JMoRgJiXO1pAHi1rjGuRHubH7Faw"
+    }
+  },
+  "proxy": "http://957ae382-b67b-41e1-a878-a7befa8f598b:A9MqrseWVbqanQsy6bO5szkSGgjP6kJ1@tun.testsprite.com:8080"
+}
